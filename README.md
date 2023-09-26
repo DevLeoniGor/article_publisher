@@ -20,7 +20,11 @@
 - ./vendor/bin/sail composer install
 - ./vendor/bin/sail artisan migrate
 - ./vendor/bin/sail artisan db:seed
-  
+
+## Visual QA Project
+
+У корені проекту є файл ArticlePublisher.postman_collection.json для Postman. 
+https://www.postman.com/
 
 ## About Laravel
 
