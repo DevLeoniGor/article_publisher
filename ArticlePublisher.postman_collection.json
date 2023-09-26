@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "1a1dc75f-0461-4aac-809c-cbdb104c38bd",
+		"name": "ArticlePublisher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16892882",
+		"_collection_link": "https://leoni-gor.postman.co/workspace/MCFR~b4a352d7-655e-4e76-9f26-9c0e87a1c361/collection/16892882-1a1dc75f-0461-4aac-809c-cbdb104c38bd?action=share&source=collection_link&creator=16892882"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_id\": 2,\n    \"email\": \"author2@mail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"author1@mail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/token",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Subscriptions",
+			"item": [
+				{
+					"name": "Subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/subscriptions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/subscriptions/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Subscribe 4\",\n    \"cost\": 99.99,\n    \"available\": 12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/subscriptions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Subscribe 22\",\n    \"cost\": 999.99,\n    \"available\": 14\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/subscriptions/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription Active",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/subscriptions/active/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions",
+								"active",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription Buy (for author)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/subscriptions/buy/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions",
+								"buy",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/subscriptions/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"subscriptions",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publications",
+			"item": [
+				{
+					"name": "Publications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_active\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/publications",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publication",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_active\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/publications/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publications Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Publication 6444\",\n    \"text\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, deleniti distinctio dolorem ducimus facere id inventore iure laborum molestiae mollitia nesciunt odit praesentium qui quis rem sed tempore temporibus velit. A accusantium adipisci aspernatur autem eaque ex id molestiae odio officiis porro, quis veniam. Ad delectus ipsam optio ullam. Amet, atque eveniet fugit harum laborum necessitatibus nobis quam quia quisquam rem tempore ut. Ab cupiditate earum eius ex illum optio qui quidem repellendus temporibus voluptatem? Accusantium adipisci alias assumenda libero minima optio pariatur quia quo recusandae sit? Aliquam animi cupiditate distinctio eum facere ipsum iste, itaque magni maxime nihil officia perspiciatis rerum sed sit unde? Accusantium cum dicta dignissimos eligendi error esse eum facere fuga fugit illo ipsa, ipsum necessitatibus nemo non nulla, omnis possimus qui quis sed sequi tempore tenetur unde. Aspernatur atque deleniti, expedita id iure modi soluta! A aliquid aut delectus enim eveniet, ex fuga maxime praesentium quam quia! Adipisci alias, at atque consequuntur delectus dolor dolorum, maxime mollitia neque nisi non odio quae quam qui sed soluta tenetur ut vel veritatis voluptates. Ab accusantium adipisci amet asperiores commodi, ducimus eligendi ex excepturi incidunt ipsam iure iusto minima necessitatibus nesciunt officiis omnis porro possimus quasi qui quo repellat repellendus rerum, sequi totam vel vero voluptates! Doloremque, laborum nam. Architecto dignissimos eius esse eveniet excepturi itaque nesciunt placeat provident quas quia quidem quis sequi soluta tempore, temporibus tenetur veritatis voluptate. Accusantium, commodi consequatur distinctio esse ex incidunt laboriosam laudantium maxime minima mollitia nobis officiis possimus, qui saepe sapiente veniam voluptate voluptatem voluptates, voluptatibus!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/publications",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publications Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Publication 677\",\n    \"text\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, deleniti distinctio dolorem ducimus facere id inventore iure laborum molestiae mollitia nesciunt odit praesentium qui quis rem sed tempore temporibus velit. A accusantium adipisci aspernatur autem eaque ex id molestiae odio officiis porro, quis veniam. Ad delectus ipsam optio ullam. Amet, atque eveniet fugit harum laborum necessitatibus nobis quam quia quisquam rem tempore ut. Ab cupiditate earum eius ex illum optio qui quidem repellendus temporibus voluptatem? Accusantium adipisci alias assumenda libero minima optio pariatur quia quo recusandae sit? Aliquam animi cupiditate distinctio eum facere ipsum iste, itaque magni maxime nihil officia perspiciatis rerum sed sit unde? Accusantium cum dicta dignissimos eligendi error esse eum facere fuga fugit illo ipsa, ipsum necessitatibus nemo non nulla, omnis possimus qui quis sed sequi tempore tenetur unde. Aspernatur atque deleniti, expedita id iure modi soluta! A aliquid aut delectus enim eveniet, ex fuga maxime praesentium quam quia! Adipisci alias, at atque consequuntur delectus dolor dolorum, maxime mollitia neque nisi non odio quae quam qui sed soluta tenetur ut vel veritatis voluptates. Ab accusantium adipisci amet asperiores commodi, ducimus eligendi ex excepturi incidunt ipsam iure iusto minima necessitatibus nesciunt officiis omnis porro possimus quasi qui quo repellat repellendus rerum, sequi totam vel vero voluptates! Doloremque, laborum nam. Architecto dignissimos eius esse eveniet excepturi itaque nesciunt placeat provident quas quia quidem quis sequi soluta tempore, temporibus tenetur veritatis voluptate. Accusantium, commodi consequatur distinctio esse ex incidunt laboriosam laudantium maxime minima mollitia nobis officiis possimus, qui saepe sapiente veniam voluptate voluptatem voluptates, voluptatibus!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/publications/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publications Active",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/publications/active/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications",
+								"active",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publications Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/publications/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"publications",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "7|LZHgkjGaeBXmHDbqWGIdXDkaZmNiI0TE6TW33SDH4efe3a55",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8005",
+			"type": "string"
+		}
+	]
+}
